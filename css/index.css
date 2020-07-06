@@ -3,6 +3,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.modal-content {
+  background-color: #B4ADA7;
+}
+
 #title {
   font-weight: 1000;
 }
@@ -26,6 +30,16 @@ body {
 }
 
 .edit {
+  background-color: #587992;
+  color: #fff;
+}
+
+.modal-close {
+  background-color: #846D74;
+  color: #fff
+}
+
+.modal-edit, .modal-add {
   background-color: #587992;
   color: #fff;
 }

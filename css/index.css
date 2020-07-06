@@ -25,12 +25,12 @@ body {
   color: #fff
 }
 
-#edit {
+.edit {
   background-color: #587992;
   color: #fff;
 }
 
-#delete {
+.delete {
   background-color: #846D74;
   color: #fff
 }

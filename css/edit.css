@@ -3,10 +3,19 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+#title {
+  font-weight: 1000;
+}
+
 #pine {
   height: 3em;
   width: 3em;
   margin: 5px;
+}
+
+#add {
+  background-color: #3C5B59;
+  color: #fff
 }
 
 #editFormTitle {

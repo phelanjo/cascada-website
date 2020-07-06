@@ -1,0 +1,19 @@
+#editBody {
+  background-color: #B4ADA7;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#pine {
+  height: 3em;
+  width: 3em;
+  margin: 5px;
+}
+
+#editFormTitle {
+  font-weight: 1000;
+}
+
+#editButton {
+  background-color: #587992;
+  color: #fff;
+}

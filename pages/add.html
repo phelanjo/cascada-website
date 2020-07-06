@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="../css/add.css"/>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body id=addBody>
 
@@ -16,6 +17,9 @@
       <div align="left">
         <h2 id="title"><img id="pine" src="../resources/waterfall.png" alt="pine.png"/>Cascada</h2>
       </div>
+      <div align="right">
+        <a href="./add.html" class="btn" id="add">Add Waterfall</a>
+      </div>
     </div>
   </div>
 
@@ -23,21 +27,21 @@
     <h2 id=addFormTitle>Add Waterfall</h2>
     <br/>
     <form>
-      <div class="form-group">
+      <div class="form-group text-left">
         <label for="name">Waterfall name</label>
         <input type="text" class="form-control" id="name" placeholder="Enter waterfall name" autocomplete="off">
       </div>
-      <div class="form-group">
+      <div class="form-group text-left">
         <label for="height">Height</label>
-        <input type="text" class="form-control" id="height" placeholder="Height" autocomplete="off">
+        <input type="text" class="form-control" id="height" placeholder="Enter height" autocomplete="off">
       </div>
-      <div class="form-group">
+      <div class="form-group text-left">
         <label for="lat">Latitude</label>
-        <input type="text" class="form-control" id="lat" placeholder="Latitude" autocomplete="off">
+        <input type="text" class="form-control" id="lat" placeholder="Enter latitude" autocomplete="off">
       </div>
-      <div class="form-group">
+      <div class="form-group text-left">
         <label for="long">Longitude</label>
-        <input type="text" class="form-control" id="long" placeholder="Longitude" autocomplete="off">
+        <input type="text" class="form-control" id="long" placeholder="Enter longitude" autocomplete="off">
       </div>
       <div align="center">
         <a href="../index.html" class="btn" id="addButton" align=center>Add</a>
@@ -45,7 +49,6 @@
     </form>
   </div>
   
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>

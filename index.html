@@ -29,7 +29,9 @@
         <h2 id="title"><img id="pine" src="./resources/waterfall.png" alt="pine.png"/>Cascada</h2>
       </div>
       <div align="right">
-        <a href="./pages/add.html" class="btn" id="add">Add Waterfall</a>
+        <button type="button" id="add" class="btn" data-toggle="modal" data-target="#addModal">
+          Add Waterfall
+        </button>
       </div>
     </div>
   </div>
@@ -55,22 +57,98 @@
           <td>44.3491° N</td>
           <td>121.9972° W</td>
           <td>
-            <a href="./pages/edit.html" class="btn btn-sm edit">Edit</a>
+            <button type="button" class="btn btn-sm edit" data-toggle="modal" data-target="#editModal">Edit</button>
             <button type="button" class="btn btn-sm delete"><i class="fas fa-trash"></i></button>
           </td>
         </tr>
         <tr>
-          <td scope="row">Steelhead Falls</th>
+          <td scope="row">Steelhead Falls</td>
           <td>20ft</td>
           <td>44.4153° N</td>
           <td>121.2894° W</td>
           <td>
-            <a href="./pages/edit.html" class="btn btn-sm edit">Edit</a>
+            <button type="button" class="btn btn-sm edit" data-toggle="modal" data-target="#editModal">Edit</button>
             <button type="button" class="btn btn-sm delete"><i class="fas fa-trash"></i></button>
           </td>
         </tr>
       </tbody>
     </table>
+
+    <!-- Add Waterfall Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Waterfall</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group text-left">
+                <label for="name">Waterfall name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter waterfall name" autocomplete="off">
+              </div>
+              <div class="form-group text-left">
+                <label for="height">Height</label>
+                <input type="text" class="form-control" id="height" placeholder="Enter height" autocomplete="off">
+              </div>
+              <div class="form-group text-left">
+                <label for="lat">Latitude</label>
+                <input type="text" class="form-control" id="lat" placeholder="Enter latitude" autocomplete="off">
+              </div>
+              <div class="form-group text-left">
+                <label for="long">Longitude</label>
+                <input type="text" class="form-control" id="long" placeholder="Enter longitude" autocomplete="off">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn modal-close" data-dismiss="modal">Close</button>
+            <button type="button" class="btn modal-add">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Edit Waterfall Modal -->
+        <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Waterfall</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="edit-form">
+                  <div class="form-group text-left">
+                    <label for="name">Waterfall name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter waterfall name" autocomplete="off">
+                  </div>
+                  <div class="form-group text-left">
+                    <label for="height">Height</label>
+                    <input type="text" class="form-control" id="height" placeholder="Enter height" autocomplete="off">
+                  </div>
+                  <div class="form-group text-left">
+                    <label for="lat">Latitude</label>
+                    <input type="text" class="form-control" id="lat" placeholder="Enter latitude" autocomplete="off">
+                  </div>
+                  <div class="form-group text-left">
+                    <label for="long">Longitude</label>
+                    <input type="text" class="form-control" id="long" placeholder="Enter longitude" autocomplete="off">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn modal-close" data-dismiss="modal">Close</button>
+                <button type="button" class="btn modal-edit">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
   </div>
   

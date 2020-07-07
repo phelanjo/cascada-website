@@ -65,10 +65,10 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="add-waterfall-form" action="http://127.0.0.1:5000/add_waterfall/" method="POST">
               <div class="form-group text-left">
                 <label for="name">Waterfall name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter waterfall name" autocomplete="off">
+                <input type="text" class="form-control" id="w-name" placeholder="Enter waterfall name" autocomplete="off">
               </div>
               <div class="form-group text-left">
                 <label for="height">Height</label>
@@ -82,11 +82,9 @@
                 <label for="long">Longitude</label>
                 <input type="text" class="form-control" id="long" placeholder="Enter longitude" autocomplete="off">
               </div>
+              <button type="button" class="btn modal-close" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn modal-add">Add</button>
             </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn modal-close" data-dismiss="modal">Close</button>
-            <button type="button" class="btn modal-add">Add</button>
           </div>
         </div>
       </div>
@@ -106,7 +104,7 @@
                 <form id="edit-form">
                   <div class="form-group text-left">
                     <label for="name">Waterfall name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter waterfall name" autocomplete="off">
+                    <input type="text" class="form-control" id="w-name" placeholder="Enter waterfall name" autocomplete="off">
                   </div>
                   <div class="form-group text-left">
                     <label for="height">Height</label>

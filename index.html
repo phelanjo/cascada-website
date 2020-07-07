@@ -41,7 +41,7 @@
     <script type="text/javascript" src="./js/map.js"></script>
 
     <table class="table table-hover table-borderless">
-      <thead>
+      <thead class="text-center">
         <tr>
           <th scope="col">Waterfall Name</th>
           <th scope="col">Height</th>
@@ -50,27 +50,7 @@
           <th scope="col">Edit/Delete</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td scope="row">Sahalie Falls</td>
-          <td>73ft</td>
-          <td>44.3491° N</td>
-          <td>121.9972° W</td>
-          <td>
-            <button type="button" class="btn btn-sm edit" data-toggle="modal" data-target="#editModal">Edit</button>
-            <button type="button" class="btn btn-sm delete"><i class="fas fa-trash"></i></button>
-          </td>
-        </tr>
-        <tr>
-          <td scope="row">Steelhead Falls</td>
-          <td>20ft</td>
-          <td>44.4153° N</td>
-          <td>121.2894° W</td>
-          <td>
-            <button type="button" class="btn btn-sm edit" data-toggle="modal" data-target="#editModal">Edit</button>
-            <button type="button" class="btn btn-sm delete"><i class="fas fa-trash"></i></button>
-          </td>
-        </tr>
+      <tbody class="text-center" id="waterfall-table-body">
       </tbody>
     </table>
 
@@ -149,6 +129,8 @@
             </div>
           </div>
         </div>
+
+        <div id=messageFromApi></div>
 
   </div>
   

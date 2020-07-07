@@ -34,9 +34,44 @@ $("document").ready(function() {
   )
 
   $("#waterfall-table-body").on("click", ".delete", (function() {
-      $(this).parent().parent().remove()
+      var td = $(this).closest('tr').find('td');
+      var name = td.eq(0).html()
+      
+      $.ajax({
+        url: "http://127.0.0.1:5000/delete_waterfall/",
+        type: "DELETE",
+        contentType: "application/json",
+        data: JSON.stringify({"name" : name}),
+      })
+
+      $(this).parent().parent().remove()  
     })
   )
+
+  $("#add-waterfall-form").submit(function(e) {
+    e.preventDefault()
+
+    var name = $("#w-name").val()
+    var height = $("#height").val()
+    var latitude = $("#lat").val()
+    var longitude = $("#long").val()
+
+    $.ajax({
+      url: "http://127.0.0.1:5000/add_waterfall/",
+      type: "POST",
+      contentType: "application/json",
+      data: JSON.stringify({
+        "name" : name,
+        "height" : height,
+        "latitude" : latitude,
+        "longitude" : longitude
+      }),
+      success: function() {
+        alert("Successfully added waterfall -- " + name)
+        location.reload()
+      }
+    })
+  })
 
 })
 

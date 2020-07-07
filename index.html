@@ -67,20 +67,20 @@
           <div class="modal-body">
             <form id="add-waterfall-form" action="http://127.0.0.1:5000/add_waterfall/" method="POST">
               <div class="form-group text-left">
-                <label for="name">Waterfall name</label>
-                <input type="text" class="form-control" id="w-name" placeholder="Enter waterfall name" autocomplete="off">
+                <label for="add-name">Waterfall name</label>
+                <input type="text" class="form-control" id="add-w-name" placeholder="Enter waterfall name" autocomplete="off">
               </div>
               <div class="form-group text-left">
-                <label for="height">Height</label>
-                <input type="text" class="form-control" id="height" placeholder="Enter height" autocomplete="off">
+                <label for="add-height">Height</label>
+                <input type="text" class="form-control" id="add-height" placeholder="Enter height" autocomplete="off">
               </div>
               <div class="form-group text-left">
-                <label for="lat">Latitude</label>
-                <input type="text" class="form-control" id="lat" placeholder="Enter latitude" autocomplete="off">
+                <label for="add=lat">Latitude</label>
+                <input type="text" class="form-control" id="add-lat" placeholder="Enter latitude" autocomplete="off">
               </div>
               <div class="form-group text-left">
-                <label for="long">Longitude</label>
-                <input type="text" class="form-control" id="long" placeholder="Enter longitude" autocomplete="off">
+                <label for="add=long">Longitude</label>
+                <input type="text" class="form-control" id="add-long" placeholder="Enter longitude" autocomplete="off">
               </div>
               <button type="button" class="btn modal-close" data-dismiss="modal">Close</button>
               <button type="submit" class="btn modal-add">Add</button>
@@ -101,28 +101,26 @@
                 </button>
               </div>
               <div class="modal-body">
-                <form id="edit-form">
+                <form id="edit-waterfall-form">
                   <div class="form-group text-left">
-                    <label for="name">Waterfall name</label>
-                    <input type="text" class="form-control" id="w-name" placeholder="Enter waterfall name" autocomplete="off">
+                    <label for="edit-name">Waterfall name</label>
+                    <input type="text" class="form-control" id="edit-w-name" placeholder="Enter waterfall name" autocomplete="off">
                   </div>
                   <div class="form-group text-left">
-                    <label for="height">Height</label>
-                    <input type="text" class="form-control" id="height" placeholder="Enter height" autocomplete="off">
+                    <label for="edit-height">Height</label>
+                    <input type="text" class="form-control" id="edit-height" placeholder="Enter height" autocomplete="off">
                   </div>
                   <div class="form-group text-left">
-                    <label for="lat">Latitude</label>
-                    <input type="text" class="form-control" id="lat" placeholder="Enter latitude" autocomplete="off">
+                    <label for="edit-lat">Latitude</label>
+                    <input type="text" class="form-control" id="edit-lat" placeholder="Enter latitude" autocomplete="off">
                   </div>
                   <div class="form-group text-left">
-                    <label for="long">Longitude</label>
-                    <input type="text" class="form-control" id="long" placeholder="Enter longitude" autocomplete="off">
+                    <label for="edit-long">Longitude</label>
+                    <input type="text" class="form-control" id="edit-long" placeholder="Enter longitude" autocomplete="off">
                   </div>
+                  <button type="button" class="btn modal-close" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn modal-edit">Save changes</button>
                 </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn modal-close" data-dismiss="modal">Close</button>
-                <button type="button" class="btn modal-edit">Save changes</button>
               </div>
             </div>
           </div>

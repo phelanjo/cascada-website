@@ -67,19 +67,19 @@
             <form id="add-waterfall-form" action="http://127.0.0.1:5000/add_waterfall/" method="POST">
               <div class="form-group text-left">
                 <label for="add-name">Waterfall name</label>
-                <input type="text" class="form-control" id="add-name" placeholder="Enter waterfall name" autocomplete="off">
+                <input type="text" class="form-control" id="add-name" name="add-name" placeholder="Enter waterfall name" autocomplete="off">
               </div>
               <div class="form-group text-left">
                 <label for="add-height">Height</label>
-                <input type="text" class="form-control" id="add-height" placeholder="Enter height" autocomplete="off">
+                <input type="text" class="form-control" id="add-height" name="add-height" placeholder="Enter height" autocomplete="off">
               </div>
               <div class="form-group text-left">
                 <label for="add=lat">Latitude</label>
-                <input type="text" class="form-control" id="add-lat" placeholder="Enter latitude" autocomplete="off">
+                <input type="text" class="form-control" id="add-lat" name="add-lat" placeholder="Enter latitude" autocomplete="off">
               </div>
               <div class="form-group text-left">
                 <label for="add=long">Longitude</label>
-                <input type="text" class="form-control" id="add-long" placeholder="Enter longitude" autocomplete="off">
+                <input type="text" class="form-control" id="add-long" name="add-long" placeholder="Enter longitude" autocomplete="off">
               </div>
               <button type="button" class="btn modal-close" data-dismiss="modal">Close</button>
               <button type="submit" class="btn modal-add">Add</button>

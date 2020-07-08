@@ -1,6 +1,6 @@
 # Cascada
 
-**[Cascada](http://project-cascada.herokuapp.com/)** is a simple CRUD web application built with HTML, CSS, JavaScript and JQuery that allows users to view a list of waterfalls in the great state of Oregon. Users are also able to add, edit and delete these waterfalls from a AWS RDS PostgresQL instance using a Python API (located [here](https://github.com/phelanjo/cascada-server))
+**[Cascada](http://project-cascada.herokuapp.com/)** is a simple CRUD web application built with HTML, CSS, JavaScript and JQuery that allows users to view a list of waterfalls in the great state of Oregon. Users are also able to add, edit and delete these waterfalls from a AWS RDS PostgreSQL instance using a Python API (located [here](https://github.com/phelanjo/cascada-server))
 
 Cascada can be run locally by cloning this repo and accessing the index.html file in your browser.
 
@@ -12,7 +12,7 @@ Cascada can be run locally by cloning this repo and accessing the index.html fil
 ## How It Works
 * Adding a waterfall 
   * Users can press the "Add Waterfall" button to be taken to a form where they can add a waterfall. All fields in this form are required, and omitting an input in any of these fields provides the user with an error message. 
-  * After successfully adding a waterfall, the waterfall is added into a PostgresQL database, and the user is taken back to the main screen where the newly created waterfall resides in a table below the map. 
+  * After successfully adding a waterfall, the waterfall is added into a PostgreSQL database, and the user is taken back to the main screen where the newly created waterfall resides in a table below the map. 
   * The table includes each waterfall's name, height, latitude and longitude, along with edit and delete buttons. 
   
 * Editing a waterfall

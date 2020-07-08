@@ -31,45 +31,51 @@ $("document").ready(function() {
         $(this).attr('value', rows[index])
       })
 
-      var oldName = $("#edit-w-name").val()
+      var oldName = $("#edit-name").val()
 
-      $("#edit-waterfall-form").submit(function(e) {
-        e.preventDefault()
-    
-        var id
-    
-        $.ajax({
-          url: "http://127.0.0.1:5000/fetch_waterfall_by_name/",
-          type: "GET",
-          contentType: "application/json",
-          data: {"name" : oldName},
-          success: function(response) {
-            id = response
-
-            var name = $("#edit-w-name").val()
-            var height = $("#edit-height").val()
-            var latitude = $("#edit-lat").val()
-            var longitude = $("#edit-long").val()
+      $("#edit-waterfall-form").validate({
+        rules: {
+          'edit-name': "required",
+          'edit-height': "required",
+          'edit-lat': "required",
+          'edit-long': "required"
+        },
+        submitHandler: function(form) {      
+          var id
       
-            $.ajax({
-              url: "http://127.0.0.1:5000/edit_waterfall/",
-              type: "UPDATE",
-              contentType: "application/json",
-              data: JSON.stringify({
-                "waterfall_id" : id,
-                "name" : name,
-                "height" : height,
-                "latitude" : latitude,
-                "longitude" : longitude
-              }),
-              success: function() {
-                alert("Successfully edited waterfall")
-                location.reload()
-              }
-            })
-          }
-        })
-      }) 
+          $.ajax({
+            url: "http://127.0.0.1:5000/fetch_waterfall_by_name/",
+            type: "GET",
+            contentType: "application/json",
+            data: {"name" : oldName},
+            success: function(response) {
+              id = response
+  
+              var name = $("#edit-name").val()
+              var height = $("#edit-height").val()
+              var latitude = $("#edit-lat").val()
+              var longitude = $("#edit-long").val()
+        
+              $.ajax({
+                url: "http://127.0.0.1:5000/edit_waterfall/",
+                type: "UPDATE",
+                contentType: "application/json",
+                data: JSON.stringify({
+                  "waterfall_id" : id,
+                  "name" : name,
+                  "height" : height,
+                  "latitude" : latitude,
+                  "longitude" : longitude
+                }),
+                success: function() {
+                  alert("Successfully edited waterfall")
+                  location.reload()
+                }
+              })
+            }
+          })
+        }
+      })
     })
   )
 
@@ -91,7 +97,7 @@ $("document").ready(function() {
   $("#add-waterfall-form").submit(function(e) {
     e.preventDefault()
 
-    var name = $("#add-w-name").val()
+    var name = $("#add-name").val()
     var height = $("#add-height").val()
     var latitude = $("#add-lat").val()
     var longitude = $("#add-long").val()

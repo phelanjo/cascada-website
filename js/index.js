@@ -35,12 +35,12 @@ $("document").ready(function() {
 
       $("#edit-waterfall-form").validate({
         rules: {
-          'edit-name': "required",
-          'edit-height': "required",
-          'edit-lat': "required",
-          'edit-long': "required"
+          "edit-name" : "required",
+          "edit-height" : "required",
+          "edit-lat" : "required",
+          "edit-long" : "required"
         },
-        submitHandler: function(form) {      
+        submitHandler: function() {      
           var id
       
           $.ajax({
@@ -94,31 +94,36 @@ $("document").ready(function() {
     })
   )
 
-  $("#add-waterfall-form").submit(function(e) {
-    e.preventDefault()
-
-    var name = $("#add-name").val()
-    var height = $("#add-height").val()
-    var latitude = $("#add-lat").val()
-    var longitude = $("#add-long").val()
-
-    $.ajax({
-      url: "http://127.0.0.1:5000/add_waterfall/",
-      type: "POST",
-      contentType: "application/json",
-      data: JSON.stringify({
-        "name" : name,
-        "height" : height,
-        "latitude" : latitude,
-        "longitude" : longitude
-      }),
-      success: function() {
-        alert("Successfully added waterfall -- " + name)
-        location.reload()
-      }
-    })
+  $("#add-waterfall-form").validate({
+    rules: {
+      "add-name" : "required",
+      "add-height" : "required",
+      "add-lat" : "required",
+      "add-long" : "required"
+    },
+    submitHandler: function() {
+      var name = $("#add-name").val()
+      var height = $("#add-height").val()
+      var latitude = $("#add-lat").val()
+      var longitude = $("#add-long").val()
+  
+      $.ajax({
+        url: "http://127.0.0.1:5000/add_waterfall/",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({
+          "name" : name,
+          "height" : height,
+          "latitude" : latitude,
+          "longitude" : longitude
+        }),
+        success: function() {
+          alert("Successfully added waterfall -- " + name)
+          location.reload()
+        }
+      })
+    }
   })
-
 })
 
 

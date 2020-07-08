@@ -1,6 +1,6 @@
 $("document").ready(function() {
   $.ajax({
-    url: "http://127.0.0.1:5000/fetch_all/",
+    url: "http://3.87.254.131:5000/fetch_all/",
     type: "GET",
     contentType: "application/json",
     success: function(response) {
@@ -44,7 +44,7 @@ $("document").ready(function() {
           var id
       
           $.ajax({
-            url: "http://127.0.0.1:5000/fetch_waterfall_by_name/",
+            url: "http://3.87.254.131:5000/fetch_waterfall_by_name/",
             type: "GET",
             contentType: "application/json",
             data: {"name" : oldName},
@@ -57,7 +57,7 @@ $("document").ready(function() {
               var longitude = $("#edit-long").val()
         
               $.ajax({
-                url: "http://127.0.0.1:5000/edit_waterfall/",
+                url: "http://3.87.254.131:5000/edit_waterfall/",
                 type: "UPDATE",
                 contentType: "application/json",
                 data: JSON.stringify({
@@ -84,7 +84,7 @@ $("document").ready(function() {
       var name = td.eq(0).html()
 
       $.ajax({
-        url: "http://127.0.0.1:5000/delete_waterfall/",
+        url: "http://3.87.254.131:5000/delete_waterfall/",
         type: "DELETE",
         contentType: "application/json",
         data: JSON.stringify({"name" : name}),
@@ -108,7 +108,7 @@ $("document").ready(function() {
       var longitude = $("#add-long").val()
   
       $.ajax({
-        url: "http://127.0.0.1:5000/add_waterfall/",
+        url: "http://3.87.254.131:5000/add_waterfall/",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({

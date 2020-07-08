@@ -52,3 +52,10 @@ body {
 .fas {
   margin: 2px;
 }
+
+#edit-w-name-error, 
+#edit-height-error, 
+#edit-lat-error, 
+#edit-long-error {
+  color: red;
+}

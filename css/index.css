@@ -53,7 +53,11 @@ body {
   margin: 2px;
 }
 
-#edit-w-name-error, 
+#add-name-error, 
+#add-height-error, 
+#add-lat-error, 
+#add-long-error,
+#edit-name-error, 
 #edit-height-error, 
 #edit-lat-error, 
 #edit-long-error {

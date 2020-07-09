@@ -9,6 +9,8 @@ Cascada can be run locally by cloning this repo and accessing the index.html fil
 > git clone https://github.com/phelanjo/cascada-website.git
 > ```
 
+_**Note - Since free-tier Heroku powers down the server instance the website is hosted on after inactivity, it often has to spin up a new instance when a user hits the website. This may cause the first page load after a period of inactivity take longer than expected (usually 5 seconds).**_ 
+
 ## How It Works
 * Adding a waterfall 
   * Users can press the "Add Waterfall" button to be taken to a form where they can add a waterfall. All fields in this form are required, and omitting an input in any of these fields provides the user with an error message. 
